@@ -1,0 +1,19 @@
+<section class="login">
+  <div class="card">
+    <h1>Ingresar</h1>
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <label>Email</label>
+      <input type="email" formControlName="email" />
+      <small *ngIf="form.get('email')?.touched && form.get('email')?.invalid">Email inválido</small>
+
+      <label>Contraseña</label>
+      <input type="password" formControlName="password" />
+      <small *ngIf="form.get('password')?.touched && form.get('password')?.invalid">
+        Obligatoria
+      </small>
+
+      <button type="submit" [disabled]="form.invalid">Entrar</button>
+      <p class="error" *ngIf="error">{{ error }}</p>
+    </form>
+  </div>
+</section>

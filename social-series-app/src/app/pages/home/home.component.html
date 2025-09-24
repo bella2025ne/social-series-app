@@ -1,0 +1,11 @@
+<section class="home">
+  <header class="hero">
+    <h1>Series más valoradas</h1>
+    <p class="sub">Catálogo en vivo desde TMDB — calificá y dejá tu comentario.</p>
+  </header>
+
+  <p *ngIf="loading" class="loading">Cargando catálogo…</p>
+  <div class="grid" *ngIf="!loading">
+    <app-series-card *ngFor="let tv of series" [tv]="tv"></app-series-card>
+  </div>
+</section>

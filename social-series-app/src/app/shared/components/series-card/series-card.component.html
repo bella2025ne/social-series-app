@@ -1,0 +1,29 @@
+<article class="card">
+  <div class="poster">
+    <img [src]="tv.poster_path!" [alt]="tv.name" loading="lazy" />
+    <div class="badge">{{ displayAverage }}</div>
+  </div>
+
+  <div class="meta">
+    <h3 title="{{ tv.name }}">{{ tv.name }}</h3>
+    <p class="ov">{{ tv.overview }}</p>
+
+    <form [formGroup]="userForm" (ngSubmit)="submitUserRating()" class="rate">
+      <div class="row">
+        <label>Tu rating (1–10)</label>
+        <input type="number" formControlName="rating" min="1" max="10" />
+      </div>
+      <div class="row">
+        <label>Comentario (opcional)</label>
+        <textarea rows="2" formControlName="comment" placeholder="¿Qué te pareció?"></textarea>
+      </div>
+      <button type="submit" [disabled]="userForm.invalid">Calificar</button>
+    </form>
+
+    <div class="user" *ngIf="submitted">
+      <p><strong>Tu rating:</strong> {{ userRating }}</p>
+      <p *ngIf="userComment"><strong>Tu comentario:</strong> {{ userComment }}</p>
+      <p><strong>Promedio mostrado:</strong> {{ displayAverage }}</p>
+    </div>
+  </div>
+</article>
