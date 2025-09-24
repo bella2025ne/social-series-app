@@ -1,0 +1,45 @@
+.login {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  background: #0b0f19;
+}
+.card {
+  width: 100%;
+  max-width: 360px;
+  background: #111827;
+  color: #e5e7eb;
+  padding: 24px;
+  border-radius: 12px;
+}
+label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
+}
+input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #243145;
+  background: #0b1220;
+  color: #e5e7eb;
+  box-sizing: border-box;
+}
+button {
+  margin-top: 14px;
+  width: 100%;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 8px;
+  background: #e50914;
+  color: #fff;
+  font-weight: 700;
+}
+small {
+  color: #f87171;
+}
+.error {
+  margin-top: 8px;
+  color: #fca5a5;
+}

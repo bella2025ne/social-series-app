@@ -1,0 +1,80 @@
+.card {
+  background: #111827;
+  color: #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.poster {
+  position: relative;
+  aspect-ratio: 2/3;
+  background: #0b0f19;
+}
+.poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: #e50914;
+  color: #fff;
+  font-weight: 700;
+  padding: 6px 8px;
+  border-radius: 8px;
+}
+.meta {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+h3 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+.ov {
+  font-size: 0.85rem;
+  line-height: 1.3;
+  color: #a2acc3;
+  max-height: 3.2em;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.rate .row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 8px 0;
+}
+input[type='number'],
+textarea {
+  width: 100%;
+  border: 1px solid #243145;
+  border-radius: 8px;
+  background: #0b1220;
+  color: #e5e7eb;
+  padding: 8px 10px;
+  box-sizing: border-box;
+}
+button {
+  align-self: flex-start;
+  background: #e50914;
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-weight: 700;
+}
+.user {
+  margin-top: 8px;
+  border-top: 1px solid #243145;
+  padding-top: 8px;
+  font-size: 0.9rem;
+}
